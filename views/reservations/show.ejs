@@ -11,7 +11,7 @@
     <p>
       <strong>For:</strong>&nbsp;<%= reservation.user.fullname %>
       <br>
-      <strong>At:</strong>&nbsp;<%= reservation.dateAndTime %>
+      <strong>At:</strong>&nbsp;<%= reservation.updatedAt %>
     </p>
   </div>
   <hr>
@@ -19,7 +19,7 @@
     <a href="/reservations/<%= reservation.id %>/edit"><i class="fa fa-edit">&nbsp;</i>Change your reservation</a>
     <br>
     <form class="form-inline" action="/reservations/delete" method="post" onsubmit="return confirm('Are you sure you want to cancel your reservation?');">
-      <input type="hidden" value="<%= reservation.id %>" name="id">
+      <input type="hidden" value="<%= reservation.id%>" name="id">
       <button class="delete" type="submit">
         <i class="fa fa-trash">&nbsp;</i>
         Cancel your reservation
